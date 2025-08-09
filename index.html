@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanishka Selvakumar - Portfolio</title>
+    <!-- Load Tailwind CSS from CDN for a modern, responsive design -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Use a custom font for better aesthetics -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Load Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #e0e7ff; /* A light blue-gray for text */
+            background-color: #0f172a; /* Dark blue-gray for the background */
+        }
+        .bg-gradient-hero {
+            background: linear-gradient(135deg, #1e293b, #0f172a);
+        }
+        .btn-primary {
+            @apply bg-indigo-600 text-white font-bold py-2 px-6 rounded-full shadow-lg hover:bg-indigo-700 transition-all duration-300 transform hover:scale-105;
+        }
+        .card {
+            @apply bg-slate-800 p-6 rounded-2xl shadow-xl transition-transform duration-300 hover:scale-105;
+        }
+        .nav-link {
+            @apply text-slate-300 hover:text-white transition-colors duration-300;
+        }
+        /* Custom scrollbar for a polished look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1e293b;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #475569;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #64748b;
+        }
+    </style>
+</head>
+<body>
+
+    <!--
+    ===================================================================================
+    Navigation Bar
+    A sticky navigation bar to help users quickly jump between sections.
+    ===================================================================================
+    -->
+    <nav class="sticky top-0 z-50 bg-slate-900 bg-opacity-90 backdrop-blur-md shadow-lg py-4">
+        <div class="container mx-auto flex justify-between items-center px-4 md:px-8">
+            <a href="#home" class="text-3xl font-bold text-indigo-400">Kanishka.dev</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <button id="mobile-menu-btn" class="md:hidden text-slate-300 text-2xl focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900 mt-2 rounded-lg shadow-lg mx-4">
+            <a href="#about" class="block py-3 px-6 nav-link">About</a>
+            <a href="#skills" class="block py-3 px-6 nav-link">Skills</a>
+            <a href="#projects" class="block py-3 px-6 nav-link">Projects</a>
+            <a href="#experience" class="block py-3 px-6 nav-link">Experience</a>
+            <a href="#contact" class="block py-3 px-6 nav-link">Contact</a>
+        </div>
+    </nav>
+
+    <main class="container mx-auto px-4 md:px-8">
+
+        <!--
+        ===============================================================================
+        Hero Section
+        The first section a visitor sees, designed to be impactful and introduce you.
+        ===============================================================================
+        -->
+        
+        <section id="home" class="min-h-screen flex items-center justify-center text-center bg-gradient-hero rounded-3xl mt-6 p-8 shadow-2xl">
+            <div class="space-y-6">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight text-white">
+                    Hi, I'm <span class="text-indigo-400">Kanishka Selvakumar</span>
+                </h1>
+                <p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto">
+                    A passionate Computer and Communication Engineering student with a strong interest in AI and full-stack development.
+                </p>
+                <div class="flex flex-wrap justify-center items-center gap-4 pt-4">
+                    <a href="https://www.linkedin.com/in/kanishka-selvakumar-75b52628b/" target="_blank" class="btn-primary">
+                        <i class="fab fa-linkedin mr-2"></i> LinkedIn
+                    </a>
+                    <a href="https://github.com/Kanishka-selvakumar" target="_blank" class="btn-primary">
+                        <i class="fab fa-github mr-2"></i> GitHub
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!--
+        ===============================================================================
+        About Me Section
+        A detailed section for your background and professional aspirations.
+        ===============================================================================
+        -->
+        <section id="about" class="py-20 md:py-32">
+            <h2 class="text-4xl font-bold text-center mb-12">About Me</h2>
+            <div class="bg-slate-800 p-8 md:p-12 rounded-3xl shadow-2xl flex flex-col md:flex-row items-center md:items-start gap-8">
+                <!--
+                YOUR PHOTO GOES HERE!
+                Replace the placeholder URL in the 'src' attribute below with the direct URL of your profile picture.
+                -->
+                <div class="flex-shrink-0 relative w-48 h-48">
+                    <img src="https://placehold.co/192x192/475569/cbd5e1?text=Kanishka" alt="Kanishka Selvakumar" class="absolute w-full h-full object-cover rounded-full shadow-lg border-4 border-indigo-500">
+                </div>
+                <div class="flex-grow text-lg text-slate-300 space-y-4">
+                    <p>My goal is to leverage my skills to build intelligent, user-centric solutions and contribute to cutting-edge technology. I enjoy solving real-world problems and am eager to collaborate on impactful projects.</p>
+                    <p>I am a Computer and Communication Engineering student with a strong foundation in programming, databases, and development tools. My passion lies in creating robust applications and exploring the potential of AI to drive innovation.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!--
+        ===============================================================================
+        Skills Section
+        Highlights your technical skills in a visually appealing card layout.
+        ===============================================================================
+        -->
+        <section id="skills" class="py-20 md:py-32">
+            <h2 class="text-4xl font-bold text-center mb-12">My Skills</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Programming Languages -->
+                <div class="card">
+                    <h3 class="text-2xl font-semibold text-indigo-400 mb-4">Programming Languages</h3>
+                    <ul class="space-y-2 text-slate-300">
+                        <li><i class="fas fa-laptop-code mr-2 text-indigo-300"></i> JAVA</li>
+                        <li><i class="fab fa-html5 mr-2 text-indigo-300"></i> HTML</li>
+                        <li><i class="fab fa-css3-alt mr-2 text-indigo-300"></i> CSS</li>
+                        <li><i class="fab fa-js mr-2 text-indigo-300"></i> JavaScript</li>
+                    </ul>
+                </div>
+                <!-- Databases -->
+                <div class="card">
+                    <h3 class="text-2xl font-semibold text-indigo-400 mb-4">Databases</h3>
+                    <ul class="space-y-2 text-slate-300">
+                        <li><i class="fas fa-database mr-2 text-indigo-300"></i> MySQL</li>
+                        <li><i class="fas fa-database mr-2 text-indigo-300"></i> SQL</li>
+                    </ul>
+                </div>
+                <!-- Tools and Platforms -->
+                <div class="card">
+                    <h3 class="text-2xl font-semibold text-indigo-400 mb-4">Tools & Platforms</h3>
+                    <ul class="space-y-2 text-slate-300">
+                        <li><i class="fab fa-github mr-2 text-indigo-300"></i> GitHub</li>
+                        <li><i class="fas fa-code mr-2 text-indigo-300"></i> VS Code</li>
+                        <li><i class="fas fa-microchip mr-2 text-indigo-300"></i> Eclipse</li>
+                        <li><i class="fas fa-box mr-2 text-indigo-300"></i> Maven</li>
+                        <li><i class="fas fa-file-excel mr-2 text-indigo-300"></i> Excel</li>
+                        <li><i class="fas fa-file-word mr-2 text-indigo-300"></i> Word</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!--
+        ===============================================================================
+        Projects Section
+        Showcases your key projects with descriptions and links.
+        ===============================================================================
+        -->
+        <section id="projects" class="py-20 md:py-32">
+            <h2 class="text-4xl font-bold text-center mb-12">Featured Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1: Currency Converter -->
+                <div class="card">
+                    <h3 class="text-2xl font-semibold text-white mb-2">Currency Converter</h3>
+                    <p class="text-slate-400 mb-4">A user-friendly web application to convert currency and provide information about various foreign currencies.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-indigo-600 text-xs font-semibold px-2.5 py-0.5 rounded-full">HTML</span>
+                        <span class="bg-indigo-600 text-xs font-semibold px-2.5 py-0.5 rounded-full">CSS</span>
+                        <span class="bg-indigo-600 text-xs font-semibold px-2.5 py-0.5 rounded-full">JavaScript</span>
+                    </div>
+                    <a href="https://github.com/Kanishka-selvakumar/Currency_Convertor" target="_blank" class="text-indigo-400 hover:text-indigo-300 font-medium">
+                        <i class="fab fa-github mr-2"></i> View on GitHub
+                    </a>
+                </div>
+                <!-- Project 2: IPO Identification -->
+                <div class="card">
+                    <h3 class="text-2xl font-semibold text-white mb-2">IPO Identification</h3>
+                    <p class="text-slate-400 mb-4">A tool to acknowledge the risks and benefits of investing in a company's Initial Public Offering (IPO).</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-indigo-600 text-xs font-semibold px-2.5 py-0.5 rounded-full">HTML</span>
+                        <span class="bg-indigo-600 text-xs font-semibold px-2.5 py-0.5 rounded-full">CSS</span>
+                        <span class="bg-indigo-600 text-xs font-semibold px-2.5 py-0.5 rounded-full">JavaScript</span>
+                    </div>
+                    <a href="https://github.com/Kanishka-selvakumar/IPO-project" target="_blank" class="text-indigo-400 hover:text-indigo-300 font-medium">
+                        <i class="fab fa-github mr-2"></i> View on GitHub
+                    </a>
+                </div>
+                <!-- Project 3: Tourism Management System -->
+                <div class="card">
+                    <h3 class="text-2xl font-semibold text-white mb-2">Tourism Management System</h3>
+                    <p class="text-slate-400 mb-4">A full-stack system to enhance trip planning and provide users with pre-packaged deals for their desired destinations.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-indigo-600 text-xs font-semibold px-2.5 py-0.5 rounded-full">HTML</span>
+                        <span class="bg-indigo-600 text-xs font-semibold px-2.5 py-0.5 rounded-full">CSS</span>
+                        <span class="bg-indigo-600 text-xs font-semibold px-2.5 py-0.5 rounded-full">JavaScript</span>
+                        <span class="bg-indigo-600 text-xs font-semibold px-2.5 py-0.5 rounded-full">Node.js</span>
+                        <span class="bg-indigo-600 text-xs font-semibold px-2.5 py-0.5 rounded-full">SQL</span>
+                    </div>
+                    <a href="https://github.com/Kanishka-selvakumar/Tour-Mangement-System" target="_blank" class="text-indigo-400 hover:text-indigo-300 font-medium">
+                        <i class="fab fa-github mr-2"></i> View on GitHub
+                    </a>
+                </div>
+                 <!-- Project 4: Fast Food Recipe -->
+                <div class="card">
+                    <h3 class="text-2xl font-semibold text-white mb-2">Fast Food Recipe</h3>
+                    <p class="text-slate-400 mb-4">A web application that provides clear instructions for preparing your favorite fast food recipes.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-indigo-600 text-xs font-semibold px-2.5 py-0.5 rounded-full">HTML</span>
+                        <span class="bg-indigo-600 text-xs font-semibold px-2.5 py-0.5 rounded-full">CSS</span>
+                        <span class="bg-indigo-600 text-xs font-semibold px-2.5 py-0.5 rounded-full">JavaScript</span>
+                    </div>
+                    <a href="https://github.com/Kanishka-selvakumar/Fast_Food_receipe" target="_blank" class="text-indigo-400 hover:text-indigo-300 font-medium">
+                        <i class="fab fa-github mr-2"></i> View on GitHub
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!--
+        ===============================================================================
+        Experience Section
+        A concise overview of your professional experience.
+        ===============================================================================
+        -->
+        <section id="experience" class="py-20 md:py-32">
+            <h2 class="text-4xl font-bold text-center mb-12">Experience</h2>
+            <div class="space-y-8 max-w-3xl mx-auto">
+                <!-- Experience 1: Brainery Spot Technology -->
+                <div class="bg-slate-800 p-8 rounded-3xl shadow-2xl">
+                    <div class="flex items-center space-x-6">
+                        <div class="w-16 h-16 rounded-full bg-indigo-600 flex items-center justify-center text-white text-2xl">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-semibold text-white">Data Scientist Intern</h3>
+                            <p class="text-indigo-400 text-lg">Brainery Spot Technology</p>
+                            <p class="text-slate-400">1 Month</p>
+                        </div>
+                    </div>
+                    <div class="mt-4 pl-24 text-slate-300">
+                        <ul class="list-disc list-inside space-y-2">
+                            <li>Analyzed and processed raw data to extract meaningful insights.</li>
+                            <li>Developed and implemented predictive models using AI techniques.</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Experience 2: OctaNet -->
+                <div class="bg-slate-800 p-8 rounded-3xl shadow-2xl">
+                    <div class="flex items-center space-x-6">
+                        <div class="w-16 h-16 rounded-full bg-indigo-600 flex items-center justify-center text-white text-2xl">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-semibold text-white">Java Developer Intern</h3>
+                            <p class="text-indigo-400 text-lg">OctaNet</p>
+                        </div>
+                    </div>
+                    <div class="mt-4 pl-24 text-slate-300">
+                        <ul class="list-disc list-inside space-y-2">
+                            <li>Worked on the development of a Bank Management System.</li>
+                            <li>Contributed to the project by applying core Java programming principles.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--
+        ===============================================================================
+        Contact Section
+        A contact form for visitors to get in touch.
+        ===============================================================================
+        -->
+        <section id="contact" class="py-20 md:py-32">
+            <h2 class="text-4xl font-bold text-center mb-12">Get in Touch</h2>
+            <div class="bg-slate-800 p-8 rounded-3xl shadow-2xl max-w-2xl mx-auto">
+                <form id="contact-form" class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-slate-300 mb-2">Name:</label>
+                        <input type="text" id="name" name="name" class="w-full bg-slate-700 border border-slate-600 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-indigo-500" required>
+                    </div>
+                    <div>
+                        <label for="email" class="block text-slate-300 mb-2">Email:</label>
+                        <input type="email" id="email" name="email" class="w-full bg-slate-700 border border-slate-600 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-indigo-500" required>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-slate-300 mb-2">Message:</label>
+                        <textarea id="message" name="message" rows="5" class="w-full bg-slate-700 border border-slate-600 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-indigo-500" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary w-full">Submit</button>
+                    <div id="form-message" class="text-center mt-4 text-green-400 hidden"></div>
+                </form>
+            </div>
+        </section>
+        
+    </main>
+
+    <!--
+    ===============================================================================
+    Footer
+    A simple footer with a copyright notice.
+    ===============================================================================
+    -->
+    <footer class="py-8 text-center text-slate-400 bg-slate-900 mt-12">
+        <p>&copy; 2025 Kanishka Selvakumar. All rights reserved.</p>
+    </footer>
+
+    <!--
+    ===============================================================================
+    JavaScript for Interactivity
+    Handles mobile menu toggle and form submission message.
+    ===============================================================================
+    -->
+    <script>
+        // Mobile menu toggle functionality
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Hide mobile menu when a link is clicked
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Handle contact form submission
+        const contactForm = document.getElementById('contact-form');
+        const formMessage = document.getElementById('form-message');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault(); // Prevent actual form submission
+
+            // For this demonstration, we just show a message instead of sending data
+            formMessage.textContent = 'Thanks for visiting!';
+            formMessage.classList.remove('hidden');
+            contactForm.reset(); // Clear the form fields
+
+            // Hide the message after a few seconds
+            setTimeout(() => {
+                formMessage.classList.add('hidden');
+            }, 5000);
+        });
+    </script>
+</body>
+</html>
